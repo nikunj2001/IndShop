@@ -22,7 +22,26 @@ const Cart = () => {
                             </div>
                     ))
                 :"Sorry your cart is currently empty"}
+                
                 </div>
+                {shoppingCart.length>0?<div className="cart-summary">
+                    <div className="summary">
+                        <h3 >Cart Summary</h3>
+                        <div className="total-items">
+                            <div className="items">
+                                Total Items
+                            </div>
+                            <div className="items-count">{qty}</div>
+                        </div>
+                        <div className="total-price-section">
+                            <div className="just-title">Total Price</div>
+                            <div className="items-price">${totalPrice}.00</div>
+                        </div>
+                        <div className="stripe-section">
+                            stripeButton
+                        </div>
+                    </div>
+                </div>:""}
         </div>
     )
 }
